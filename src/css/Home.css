@@ -46,6 +46,9 @@
     flex-direction: column;
     align-items: center;
 }
+.dispNone{
+    display: none;
+}
 .cool_trick{
     position: absolute;
     top: 5px;
@@ -56,6 +59,10 @@
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 10px;
     border: 2px solid #ec8cff;
+    white-space: pre-line;
+}
+.cool_trick2{
+    top: 60px;
 }
 .side__face{
     height: 260px;
@@ -245,8 +252,8 @@
 
 /* Hinge Animation */
 .hingeAnimated {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
   }
@@ -406,6 +413,10 @@
         border-top-right-radius: 10px;
         border-bottom-right-radius: 0;
     }
+    .cool_trick2{
+        top: auto;
+        bottom: 55px;
+    }
   }
 
   @media screen and (max-width: 800px){
@@ -435,6 +446,10 @@
         bottom: 10px;
         left: 10px;
         top: auto;
+    }
+    .cool_trick2{
+        top: auto;
+        bottom: 300px;
     }
     .lob{
         position: relative;

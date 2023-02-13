@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import "../css/Home.css";
 import {MdOutgoingMail} from 'react-icons/md';
 import {TbPhoneCall} from 'react-icons/tb';
@@ -11,12 +11,25 @@ function Home() {
   const [textName,setTextName] = useState("text__name");
   const [textRole,setTextRole] = useState("text__fsd");
   const [address,setAddress] =useState("Email : nilesharmal24899@gmail.com");
+  const [coolClass,setCoolClass]=useState("dispNone");
+  const [coolClass2,setCoolClass2]=useState("dispNone");
+  const coolText ="Hey! Wanna see a cool trick. Just type my first name";
+  const [coolText2,setCoolText2] = useState("Hey! Wanna see a cool trick. Just type my first name.")
 
   const delay = ms => new Promise(
     resolve => setTimeout(resolve, ms)
   );
-
+  useEffect(() => {
+    async function wait4() {
+      await delay(3000);
+      setCoolClass("cool_trick zoomInLeft animatedLeft");
+    }
+    wait4()
+    
+  }, [])
+  
   const handleBlobMouseOver =async() =>{
+    
     setLobClass("lob rubberBand animated");
     await delay(1000);
     setLobClass("lob");
@@ -31,9 +44,11 @@ function Home() {
   const handleInputChange = (e) =>{
     if(e.target.value.toLowerCase().includes("nilesh")){
       setTextHello("text__hello hinge hingeAnimated");
-      setTextName("text__name hinge hingeAnimated")
-      setTextRole("text__fsd hinge hingeAnimated")
-      setLobClass("lob hinge hingeAnimated")
+      setTextName("text__name hinge hingeAnimated");
+      setTextRole("text__fsd hinge hingeAnimated");
+      setLobClass("lob hinge hingeAnimated");
+      setCoolClass2("cool_trick zoomInLeft animatedLeft cool_trick2")
+      setCoolText2("Email and Contact number are still there to contact me! :) ")
       e.target.value="";
     }
     else{
@@ -41,6 +56,7 @@ function Home() {
       setTextName("text__name");
       setTextRole("text__fsd");
       setLobClass("lob");
+      setCoolClass2("dispNone");
     }
   }
 
@@ -53,8 +69,11 @@ function Home() {
 
   return (
     <div className="home__body">
-      <div className="cool_trick">
-        {window.innerWidth>500?"Hey! Wanna see a cool trick. Just type my first name":"Hey! Wanna see a cool trick. Just click anywhere and type my first name"}
+      <div className={coolClass}>
+        {window.innerWidth>500?coolText:"Hey! Wanna see a cool trick. Just click anywhere and type my first name."}
+      </div>
+      <div className={coolClass2}>
+        {coolText2}
       </div>
       <div className="lob__container">
         <div className={lobClass} onClick={handleBlobMouseOver} onMouseLeave={handleBlobMouseOver}>

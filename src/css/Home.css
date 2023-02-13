@@ -1,0 +1,388 @@
+.home__body{
+    /* background-color: rgb(6, 17, 29); */
+    height: 100vh;
+    width: 100vw;
+    color: rgb(238, 255, 253);
+    position: relative;
+    background-color:hsla(261,100%,8%,1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* overflow-x:hidden ; */
+    overflow: hidden;
+    background-image:
+                    radial-gradient(at 100% 100%, hsla(191,62%,21%,0.66) 0px, transparent 50%),
+                    radial-gradient(at 16% 57%, hsla(240,72%,9%,1) 0px, transparent 50%),
+                    radial-gradient(at 4% 92%, hsla(258,89%,20%,0.68) 0px, transparent 50%),
+                    radial-gradient(at 71% 15%, hsla(240,46%,21%,0.91) 0px, transparent 50%),
+                    radial-gradient(at 48% 95%, hsla(258,60%,15%,1) 0px, transparent 50%),
+                    radial-gradient(at 86% 35%, hsla(202,90%,13%,1) 0px, transparent 50%),
+                    radial-gradient(at 40% 13%, hsla(316,85%,9%,1) 0px, transparent 50%),
+                    radial-gradient(at 24% 26%, hsla(240,100%,4%,1) 0px, transparent 50%),
+                    radial-gradient(at 46% 69%, hsla(202,100%,16%,1) 0px, transparent 50%);
+}
+.lob__container{
+    position: relative;
+    height: 700px;
+    width: 1300px;
+}
+.lob{
+    height: 300px;
+    width: 300px;
+    border-radius: 30% 70% 70% 30% / 55% 66% 34% 45%  ;
+    background: #95085d;
+    background-image: linear-gradient(45deg,#3023AE 0%,#FF0099 100%);
+    position: absolute;
+    top: 70px;
+    left: 0px;
+}
+.text__Container{
+    position: absolute;
+    right: 150px;
+    top: 70px;
+    height: 600px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.side__face{
+    height: 260px;
+    margin-top: 25px;
+    margin-left: 35px;
+    /* width: 280px; */
+}
+.text__hello{
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 70px;
+    color: rgb(250, 186, 255);
+}
+.text__name{
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #b1fffc;
+}
+.text__fsd{
+    font-size: 24px;
+    font-weight:600;
+    color: #b1fffc;
+}
+.contact{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 170px;
+    width: 450px;
+}
+.contact__div__Container{
+    /* height: 30px; */
+    width: fit-content;
+    position: relative;
+    
+}
+.textInput{
+    opacity: 0;
+    user-select: none;
+    cursor: default;
+}
+.contact__anchor1,.contact__anchor2,.contact__anchor3,.contact__anchor4{
+    color: rgb(250, 186, 255);
+    text-decoration: none;
+}
+.contact__anchor1,.contact__anchor3{
+    position: absolute;
+    width: 270px;
+    left: -50px;
+    top: 0;
+    opacity: 0;
+    transition: 200ms ease-in;
+    cursor: default;
+}
+.contact__anchor4{
+    font-size: 32px;
+    text-align: center;
+    cursor: pointer;
+}
+.contact__anchor2{
+    font-size: 38px;
+    cursor: pointer;
+}
+.contact__anchor4:hover{
+    color: rgb(254, 240, 255);
+}
+.contact__anchor2:hover{
+    color: rgb(254, 240, 255);
+}
+.contact__div__Container:hover .contact__anchor3{
+    opacity: 1;
+    top: -30px;
+    cursor: pointer;
+}
+.contact__div__Container:hover .contact__anchor1{
+    opacity: 1;
+    top: -30px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Rubber Band Animation */
+/*base code*/
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  /* .animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+  .animated.hinge {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+  } */
+
+  /*the animation definition*/
+  @-webkit-keyframes rubberBand {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1)
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, .75, 1);
+      transform: scale3d(1.25, .75, 1)
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+      transform: scale3d(0.75, 1.25, 1)
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, .85, 1);
+      transform: scale3d(1.15, .85, 1)
+    }
+    65% {
+      -webkit-transform: scale3d(.95, 1.05, 1);
+      transform: scale3d(.95, 1.05, 1)
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, .95, 1);
+      transform: scale3d(1.05, .95, 1)
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1)
+    }
+  }
+  @keyframes rubberBand {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+      -ms-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1)
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, .75, 1);
+      -ms-transform: scale3d(1.25, .75, 1);
+      transform: scale3d(1.25, .75, 1)
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+      -ms-transform: scale3d(0.75, 1.25, 1);
+      transform: scale3d(0.75, 1.25, 1)
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, .85, 1);
+      -ms-transform: scale3d(1.15, .85, 1);
+      transform: scale3d(1.15, .85, 1)
+    }
+    65% {
+      -webkit-transform: scale3d(.95, 1.05, 1);
+      -ms-transform: scale3d(.95, 1.05, 1);
+      transform: scale3d(.95, 1.05, 1)
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, .95, 1);
+      -ms-transform: scale3d(1.05, .95, 1);
+      transform: scale3d(1.05, .95, 1)
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+      -ms-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1)
+    }
+  }
+  .rubberBand {
+    -webkit-animation-name: rubberBand;
+    animation-name: rubberBand
+  }
+  
+
+
+
+/* Hinge Animation */
+.hingeAnimated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  /* .animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+  .animated.hinge {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+  } */
+  /*the animation definition*/
+  @-webkit-keyframes hinge {
+    0% {
+      -webkit-transform-origin: top left;
+      transform-origin: top left;
+      -webkit-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out
+    }
+    20%,
+    60% {
+      -webkit-transform: rotate3d(0, 0, 1, 80deg);
+      transform: rotate3d(0, 0, 1, 80deg);
+      -webkit-transform-origin: top left;
+      transform-origin: top left;
+      -webkit-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out
+    }
+    40%,
+    80% {
+      -webkit-transform: rotate3d(0, 0, 1, 60deg);
+      transform: rotate3d(0, 0, 1, 60deg);
+      -webkit-transform-origin: top left;
+      transform-origin: top left;
+      -webkit-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
+      opacity: 1
+    }
+    100% {
+      -webkit-transform: translate3d(0, 700px, 0);
+      transform: translate3d(0, 700px, 0);
+      opacity: 0
+    }
+  }
+  @keyframes hinge {
+    0% {
+      -webkit-transform-origin: top left;
+      -ms-transform-origin: top left;
+      transform-origin: top left;
+      -webkit-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out
+    }
+    20%,
+    60% {
+      -webkit-transform: rotate3d(0, 0, 1, 80deg);
+      -ms-transform: rotate3d(0, 0, 1, 80deg);
+      transform: rotate3d(0, 0, 1, 80deg);
+      -webkit-transform-origin: top left;
+      -ms-transform-origin: top left;
+      transform-origin: top left;
+      -webkit-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out
+    }
+    40%,
+    80% {
+      -webkit-transform: rotate3d(0, 0, 1, 60deg);
+      -ms-transform: rotate3d(0, 0, 1, 60deg);
+      transform: rotate3d(0, 0, 1, 60deg);
+      -webkit-transform-origin: top left;
+      -ms-transform-origin: top left;
+      transform-origin: top left;
+      -webkit-animation-timing-function: ease-in-out;
+      animation-timing-function: ease-in-out;
+      opacity: 1
+    }
+    100% {
+      -webkit-transform: translate3d(0, 700px, 0);
+      -ms-transform: translate3d(0, 700px, 0);
+      transform: translate3d(0, 700px, 0);
+      opacity: 0
+    }
+  }
+  .hinge {
+    -webkit-animation-name: hinge;
+    animation-name: hinge
+  }
+  
+  @media screen and (max-width: 1000px){
+    .text__Container{
+        right: 50px;
+        width: 400px;
+    }
+  }
+
+  @media screen and (max-width: 800px){
+    .home__body{
+        height:950px;
+    }
+    .lob__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 30px;
+        position: absolute;
+        width: fit-content;
+    }
+    .text__Container{
+        position: relative;
+        top: 180px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: fit-content;
+        width: fit-content;
+    }
+    .lob{
+        position: relative;
+        top:60px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    .text__hello{
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 70px;
+    }
+    .text__name{
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    .text__fsd{
+        font-size: 20px;
+        font-weight:600;
+    }
+    .contact{
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 180px;
+    }
+    .contact__anchor1,.contact__anchor3{
+        left: -90px;
+        
+    }
+  }

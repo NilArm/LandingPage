@@ -53,6 +53,9 @@ function Home() {
 
   return (
     <div className="home__body">
+      <div className="cool_trick">
+        {window.innerWidth>500?"Hey! Wanna see a cool trick. Just type my first name":"Hey! Wanna see a cool trick. Just click anywhere and type my first name"}
+      </div>
       <div className="lob__container">
         <div className={lobClass} onClick={handleBlobMouseOver} onMouseLeave={handleBlobMouseOver}>
           <img className="side__face" alt="Nilesh" src={face}/>

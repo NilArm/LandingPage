@@ -14,7 +14,7 @@ function Home() {
   const [coolClass,setCoolClass]=useState("dispNone");
   const [coolClass2,setCoolClass2]=useState("dispNone");
   const coolText ="Hey! Wanna see a cool trick. Just type my first name";
-  const [coolText2,setCoolText2] = useState("Hey! Wanna see a cool trick. Just type my first name.")
+  const coolText2 = "Email and Contact number are still there to contact me! :)";
 
   const delay = ms => new Promise(
     resolve => setTimeout(resolve, ms)
@@ -41,14 +41,18 @@ function Home() {
     setTextClass("text__Container");
   }
 
+  const handlecoolTrickAwait =async() =>{
+    await delay(1500);
+    setCoolClass2("cool_trick zoomInLeft animatedLeft cool_trick2");
+  }
+
   const handleInputChange = (e) =>{
     if(e.target.value.toLowerCase().includes("nilesh")){
       setTextHello("text__hello hinge hingeAnimated");
       setTextName("text__name hinge hingeAnimated");
       setTextRole("text__fsd hinge hingeAnimated");
       setLobClass("lob hinge hingeAnimated");
-      setCoolClass2("cool_trick zoomInLeft animatedLeft cool_trick2")
-      setCoolText2("Email and Contact number are still there to contact me! :) ")
+      handlecoolTrickAwait();
       e.target.value="";
     }
     else{

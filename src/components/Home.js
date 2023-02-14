@@ -74,7 +74,7 @@ function Home() {
   return (
     <div className="home__body">
       <div className={coolClass}>
-        {window.innerWidth>500?coolText:"Hey! Wanna see a cool trick. Just click anywhere and type my first name."}
+        {window.innerWidth>500?coolText:"Hey! Wanna see a cool trick. Just click anywhere on screen and type my first name."}
       </div>
       <div className={coolClass2}>
         {coolText2}
